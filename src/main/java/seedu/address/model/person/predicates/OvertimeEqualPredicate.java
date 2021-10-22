@@ -12,9 +12,9 @@ public class OvertimeEqualPredicate implements Predicate<Person> {
     }
 
     /**
-     * Tests if the person given has overtime strictly less than the given value.
+     * Tests if the person given has overtime equal to the given value.
      * @param person The person whose overtime is to be tested
-     * @return true if the person's overtime is strictly less than the given value.
+     * @return true if the person's overtime is equal to the given value.
      */
     @Override
     public boolean test(Person person) {
