@@ -303,22 +303,15 @@ public class FindCommandParser implements Parser<FindCommand> {
      * @param type The comparison type
      * @return A String representing the value to compare to
      */
-    private String getComparisonValue(String input, CompareType type) {
-        String stringValue = "";
+    private String getComparisonValue(String input, CompareType type) throws ParseException {
         assert (input.length() > 2);
-        switch (type) {
-        case MORE_THAN_EQUAL:
-        case LESS_THAN_EQUAL:
-            stringValue = input.substring(2);
-            break;
-        case LESS_THAN:
-        case MORE_THAN:
-        case EQUAL:
-            stringValue = input.substring(1);
-            break;
-        default:
-            break;
+        if (type == CompareType.MORE_THAN_EQUAL || type == CompareType.LESS_THAN_EQUAL) {
+            return input.substring(2);
+        } else if (type == CompareType.EQUAL || type == CompareType.LESS_THAN || type == CompareType.MORE_THAN) {
+            return input.substring(1);
+        } else {
+            throw new ParseException(
+                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
         }
-        return stringValue;
     }
 }
