@@ -833,6 +833,8 @@ Guarantees:
 2.  HeRon shows a list of employees
 3.  User requests to find all employees with a given query (name, phone, tags, and other valid queries)
 4.  HeRon shows a list of employees with that given name
+    
+    Use case ends.
 
 **Extensions**
 
@@ -919,9 +921,11 @@ Guarantees:
 
    Use case ends.
 
+**Extensions**
+
 * 2a. The list is empty.
 
-  Use case ends.
+   Use case ends.
 
 * 3a. The given index is invalid.
 
