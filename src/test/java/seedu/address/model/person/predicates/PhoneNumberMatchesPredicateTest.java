@@ -14,7 +14,7 @@ import seedu.address.testutil.PersonBuilder;
 class PhoneNumberMatchesPredicateTest {
 
     @Test
-    void equals() {
+    public void equals() {
         List<String> firstPredicateKeywordList = Arrays.asList("91234567", "81828384");
         List<String> secondPredicateKeywordList = Arrays.asList("81828384");
 
@@ -44,7 +44,7 @@ class PhoneNumberMatchesPredicateTest {
     }
 
     @Test
-    void test_phoneNumberMatches_returnsTrue() {
+    public void test_phoneNumberMatches_returnsTrue() {
         // One keyword
         PhoneNumberMatchesPredicate predicate =
                 new PhoneNumberMatchesPredicate(Collections.singletonList("91234567"));

@@ -14,7 +14,7 @@ import seedu.address.testutil.PersonBuilder;
 class TagContainsKeywordsPredicateTest {
 
     @Test
-    void equals() {
+    public void equals() {
         List<String> firstPredicateKeywordList = Arrays.asList("friend", "colleague");
         List<String> secondPredicateKeywordList = Arrays.asList("friend");
 
@@ -44,7 +44,7 @@ class TagContainsKeywordsPredicateTest {
     }
 
     @Test
-    void test_tagContainsKeywords_returnsTrue() {
+    public void test_tagContainsKeywords_returnsTrue() {
         // One keyword
         TagContainsKeywordsPredicate predicate =
                 new TagContainsKeywordsPredicate(Collections.singletonList("friend"));

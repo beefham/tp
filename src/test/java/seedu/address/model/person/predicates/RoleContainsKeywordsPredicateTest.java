@@ -14,7 +14,7 @@ import seedu.address.testutil.PersonBuilder;
 class RoleContainsKeywordsPredicateTest {
 
     @Test
-    void equals() {
+    public void equals() {
         List<String> firstPredicateKeywordList = Arrays.asList("Admin", "IT");
         List<String> secondPredicateKeywordList = Arrays.asList("IT");
 
@@ -44,7 +44,7 @@ class RoleContainsKeywordsPredicateTest {
     }
 
     @Test
-    void test_roleContainsKeywords_returnsTrue() {
+    public void test_roleContainsKeywords_returnsTrue() {
         // One keyword
         RoleContainsKeywordsPredicate predicate =
                 new RoleContainsKeywordsPredicate(Collections.singletonList("Admin"));
